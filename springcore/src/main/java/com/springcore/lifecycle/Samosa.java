@@ -22,10 +22,10 @@ public class Samosa {
 	}
 
 	public void init() {
-		System.out.println("inside init method");
+		System.out.println("samosa inside init method");
 	}
 
 	public void destroy() {
-		System.out.println("inside destroy method");
+		System.out.println("samosa inside destroy method");
 	}
 }

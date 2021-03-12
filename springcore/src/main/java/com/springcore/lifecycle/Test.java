@@ -8,11 +8,15 @@ public class Test {
 	public static void main(String[] args) {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/springcore/lifecycle/samosa_config.xml");
-		Samosa s = (Samosa) context.getBean("samosa");
-		System.out.println(s);
 //		registering shutdown hook
 		context.registerShutdownHook();
+		Samosa s = (Samosa) context.getBean("samosa");
+		System.out.println(s);
 //		context.close();
+
+		System.out.println("-----------------------------");
+		Pepsi p = (Pepsi) context.getBean("pepsi");
+		System.out.println(p);
 	}
 
 }

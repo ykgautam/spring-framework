@@ -11,4 +11,8 @@
 	<bean class="com.springcore.lifecycle.Samosa" name="samosa"
 		p:price="50.50" init-method="init" destroy-method="destroy" />
 
+	<bean class="com.springcore.lifecycle.Pepsi" name="pepsi">
+		<property name="price" value="50" />
+	</bean>
+
 </beans>
