@@ -1,6 +1,7 @@
 package com.springcore.constructor_injection;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
@@ -12,6 +13,11 @@ public class Test {
 		System.out.println(p);
 		System.out.println(p.getName());
 		System.out.println(p.getCertificate());
+
+		Addition add = (Addition) context.getBean("addition");
+		add.sum();
+
+		((AbstractApplicationContext) context).close();
 
 	}
 }
