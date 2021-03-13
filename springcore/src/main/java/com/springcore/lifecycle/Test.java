@@ -17,6 +17,13 @@ public class Test {
 		System.out.println("-----------------------------");
 		Pepsi p = (Pepsi) context.getBean("pepsi");
 		System.out.println(p);
+
+		AbstractApplicationContext context2 = new ClassPathXmlApplicationContext(
+				"com/springcore/lifecycle/sweet_config.xml");
+		Sweet sweet = (Sweet) context2.getBean("sweet");
+		System.out.println(sweet);
+
+		context2.registerShutdownHook();
 	}
 
 }
