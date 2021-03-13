@@ -8,12 +8,16 @@
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:annotation-config />
+	<context:annotation-config /> 
 		
 	<!-- manual wiring using property -->
-	<bean class="com.springcore.auto.wire.annotation.Address" name="address">
+	<bean class="com.springcore.auto.wire.annotation.Address" name="address1">
 		<property name="street" value="1st street"></property>
 		<property name="city" value="pune"></property>
+	</bean>
+	<bean class="com.springcore.auto.wire.annotation.Address" name="address2">
+		<property name="street" value="2nd street"></property>
+		<property name="city" value="Delhi"></property>
 	</bean>
 	
 	
