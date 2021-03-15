@@ -1,11 +1,16 @@
 package com.springcore.stereotype;
 
+/*
+ * spring bean scope: singleton, prototype 
+ */
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("ob") // obj ref name as "ob"
+@Scope("prototype")
 public class Student {
 	@Value("yash")
 	private String studentName;
