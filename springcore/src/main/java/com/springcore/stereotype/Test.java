@@ -8,6 +8,7 @@ public class Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/stereotype/stereo_config.xml");
 		Student student = context.getBean("ob", Student.class);
 		System.out.println(student);
+		System.out.println(student.getAddress());
 	}
 
 }
